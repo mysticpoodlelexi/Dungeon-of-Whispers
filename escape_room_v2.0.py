@@ -1,5 +1,6 @@
 import pygame
 import sys
+import os
 
 pygame.init()
 try:
@@ -12,22 +13,28 @@ WINDOW_WIDTH = 1024
 WINDOW_HEIGHT = 768
 FPS = 60
 
-# File paths
-THEME_MUSIC_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\theme.mp3"
-CHEST_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\chest.png"
-BUTTON_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\button.png"
-DOOR_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\door.png"
-KEYPAD_EXTRA_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\keypad_extra.png"
-KEYPAD_DISPLAY_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\keypad_display.png"
-KEY_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\key_a.png"
-DOOR_OPEN_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\door_open.png"
-OPEN_SOUND_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\open.wav"
-SLOT_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\slot.png"
-ROPE_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\rope.png"
-BG1_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\bg.png"
-BG2_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\bg2.png"
-BG3_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\bg3.png"
-FRAG_IMAGE_PATH = r"C:\Users\Lexi\Desktop\MiniGames\textures_escape\vase_fragment.png"
+# Base directory where this .py file lives
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Path to textures_escape folder
+TEXTURES_DIR = os.path.join(BASE_DIR, "textures_escape")
+
+THEME_MUSIC_PATH = os.path.join(TEXTURES_DIR, "theme.mp3")
+CHEST_IMAGE_PATH = os.path.join(TEXTURES_DIR, "chest.png")
+BUTTON_IMAGE_PATH = os.path.join(TEXTURES_DIR, "button.png")
+DOOR_IMAGE_PATH = os.path.join(TEXTURES_DIR, "door.png")
+KEYPAD_EXTRA_PATH = os.path.join(TEXTURES_DIR, "keypad_extra.png")
+KEYPAD_DISPLAY_PATH = os.path.join(TEXTURES_DIR, "keypad_display.png")
+KEY_IMAGE_PATH = os.path.join(TEXTURES_DIR, "key_a.png")
+DOOR_OPEN_IMAGE_PATH = os.path.join(TEXTURES_DIR, "door_open.png")
+OPEN_SOUND_PATH = os.path.join(TEXTURES_DIR, "open.wav")
+SLOT_IMAGE_PATH = os.path.join(TEXTURES_DIR, "slot.png")
+ROPE_IMAGE_PATH = os.path.join(TEXTURES_DIR, "rope.png")
+BG1_PATH = os.path.join(TEXTURES_DIR, "bg.png")
+BG2_PATH = os.path.join(TEXTURES_DIR, "bg2.png")
+BG3_PATH = os.path.join(TEXTURES_DIR, "bg3.png")
+FRAG_IMAGE_PATH = os.path.join(TEXTURES_DIR, "vase_fragment.png")
+
 
 # Load music
 try:
